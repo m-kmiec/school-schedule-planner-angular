@@ -10,6 +10,9 @@ import { MatButtonModule } from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { CourseListComponent } from './course-list/course-list.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
+import { RouterModule } from '@angular/router';
+import { AddCourseComponent } from './add-course/add-course.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,6 +20,7 @@ import { CourseDetailsComponent } from './course-details/course-details.componen
     NavbarComponent,
     CourseListComponent,
     CourseDetailsComponent,
+    AddCourseComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,7 +28,9 @@ import { CourseDetailsComponent } from './course-details/course-details.componen
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    RouterModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

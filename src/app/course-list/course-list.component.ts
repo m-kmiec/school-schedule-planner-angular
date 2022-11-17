@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SUBJECTS } from '../database/list-of-subjects';
 import { Course } from '../models/Course';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-course-list',
@@ -10,7 +11,11 @@ import { Course } from '../models/Course';
 export class CourseListComponent implements OnInit{
   courses: Course[]=[];
   //subjects: Subject[] = SUBJECTS;
-    ngOnInit(): void {
-
+  constructor(
+    private router: Router
+    ){}
+    ngOnInit(){}
+  public addCourse(): void{
+    this.router.navigate(['/addCourse']);
   }
 }

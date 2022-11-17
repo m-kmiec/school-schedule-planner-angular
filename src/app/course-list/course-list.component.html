@@ -1,8 +1,7 @@
 <p>Lista przedmiotów</p>>
 <ol>
-    <button></button>
-    <p>Przedmioty: </p>
-    <li *ngFor="let course of courses">    
+    <button (click)="addCourse()">Dodaj kurs!</button>
+    <ng-container *ngFor="let course of courses">    
        <app-course-details [course]="course"></app-course-details>    
-    </li>
+    </ng-container>
 </ol>
