@@ -6,5 +6,5 @@ export class Course{
         public subject: Subject,
         public teacher: Teacher,
         public duration: string
-    ){}
+   ){}
 }
