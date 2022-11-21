@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { SUBJECTS } from '../database/list-of-subjects';
 import { Course } from '../models/Course';
 import { Router } from '@angular/router';
 
