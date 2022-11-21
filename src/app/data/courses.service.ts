@@ -18,4 +18,15 @@ export class CoursesService {
     getStudentGroups(): Observable<StudentGroup[]> {
         return this.http.get<StudentGroup[]>(this.url + "/studentGroups"); 
     }
+    addCourse(data: any) {
+        return this.http.post<any>(this.url + "/courses",data);
+    }
+
+    editCourse(data: any, id:number){
+        return this.http.put<any>(this.url + "/courses/"+id,data);
+    }
+
+    deleteCourse(id: number){
+        return this.http.delete<any>(this.url + "/courses/"+id);
+    }
 }

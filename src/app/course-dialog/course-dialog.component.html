@@ -1,0 +1,35 @@
+<h1 mat-form-title>Create new course!</h1>
+<div mat-form-content>
+    <label>Create new course!</label>
+    <form [formGroup]="courseForm">
+            <mat-form-field appearance="outline">
+                <mat-label>Select subject:</mat-label>
+                <mat-select formControlName="subject"> 
+                    <mat-option *ngFor="let sub of subjects" [value] = sub>
+                        {{sub.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Select teacher:</mat-label>
+                <mat-select formControlName="teacher">
+                    <mat-option *ngFor="let teach of teachers" [value]=teach>
+                        {{teach.name}} {{teach.surrname}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Type:</mat-label>
+                <input matInput formControlName="type" name="type">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Duration:</mat-label>
+                <input matInput formControlName="duration" name="duration">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Hours required:</mat-label>
+                <input matInput formControlName="hoursReq" name="hoursReq">
+            </mat-form-field>
+            <button mat-raised-button color="primary" (click) = "addCourse()">Add</button>
+    </form>
+</div>

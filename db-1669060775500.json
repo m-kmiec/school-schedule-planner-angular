@@ -1,6 +1,22 @@
 {
   "courses": [
     {
+      "id": 1,
+      "subject": {
+        "name": "Mathematics",
+        "abbre": "MATH",
+        "isMandatory": true
+      },
+      "teacher": {
+        "name": "Caius",
+        "surrname": "Mackenzie",
+        "coursesTaught": []
+      },
+      "type": "Science",
+      "duration": "45min",
+      "hoursReq": "12"
+    },
+    {
       "subject": {
         "name": "Wychowanie fizyczne",
         "abbre": "W-F",
@@ -16,18 +32,5 @@
       "hoursReq": "8",
       "id": 2
     }
-  ],
-  "studentGroups": [
-    {
-        "name": "3F",
-        "additionalCourses": []
-    },
-    {
-        "name": "1B",
-        "additionalCourses": []
-    },
-    {
-        "name": "2B",
-        "additionalCourses": []
-    }
-]
+  ]
+}
