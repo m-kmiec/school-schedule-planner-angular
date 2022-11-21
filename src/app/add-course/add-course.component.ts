@@ -1,32 +1,36 @@
-import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { Form, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { SUBJECTS } from '../database/list-of-subjects';
 import { TEACHERS } from '../database/list-of-teachers';
 import { Course } from '../models/Course';
 import { Subject } from '../models/Subject';
 import { Teacher } from '../models/Teacher';
+import { FormGroup, FormBuilder, Validators} from '@angular/forms';
+
 
 @Component({
   selector: 'app-add-course',
   templateUrl: './add-course.component.html',
   styleUrls: ['./add-course.component.css']
 })
-export class AddCourseComponent {
+export class AddCourseComponent implements OnInit{
+    public courseForm !: FormGroup;
     public subjects: Subject[] = SUBJECTS;
     public teachers: Teacher[] = TEACHERS;
-    public selSub: Subject = this.subjects[0];
-    public selTeach: Teacher = this.teachers[0];
 
-    public setSelSub(index: string):void{
-      this.selSub = this.subjects[parseInt(index)];
-    }
+    constructor(private formBuilder : FormBuilder){}
 
-    public setSelTeacher(index: string):void{
-      this.selTeach = this.teachers.find(t => t.surrname == index) as Teacher;
+    ngOnInit(): void {
+      this.courseForm = this.formBuilder.group({
+        subject : ['',Validators.required],
+        teacher : ['',Validators.required],
+        type : ['',Validators.required],
+        duration : ['',Validators.required],
+        hoursReq : ['',Validators.required],
+      })
     }
-    onSubmit(f: NgForm){
-      let course = new Course(this.selSub,this.selTeach,f.value.startsAt,f.value.endsAt,f.value.hoursReq);
-       
+    onSubmit(){
+      console.log(this.courseForm.value);
     }
 }

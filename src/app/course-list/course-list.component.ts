@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { SUBJECTS } from '../database/list-of-subjects';
 import { Course } from '../models/Course';
-import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { AddCourseComponent } from '../add-course/add-course.component';
 
 @Component({
   selector: 'app-course-list',
@@ -10,11 +11,12 @@ import { Router } from '@angular/router';
 })
 export class CourseListComponent implements OnInit{
   courses: Course[]=[];
-  constructor(
-    private router: Router
+  constructor(private dialog: MatDialog
     ){}
     ngOnInit(){}
-  public addCourse(): void{
-    this.router.navigate(['/addCourse']);
+  openDialog(){
+    this.dialog.open(AddCourseComponent, {
+      width: "30%"
+    });
   }
 }
