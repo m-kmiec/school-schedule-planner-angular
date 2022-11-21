@@ -20,7 +20,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialogModule } from "@angular/material/dialog";
 import { MatInputModule} from "@angular/material/input";
 import { MatCard, MatCardModule } from '@angular/material/card';
-
+import { HttpClientModule } from '@angular/common/http';
+import { CoursesService } from './data/courses.service';
 
 
 @NgModule({
@@ -49,8 +50,11 @@ import { MatCard, MatCardModule } from '@angular/material/card';
     MatDialogModule,
     MatCardModule,
     ReactiveFormsModule
+    HttpClientModule,
+    RouterModule,
+
   ],
-  providers: [],
+  providers: [CoursesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
