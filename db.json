@@ -2,33 +2,33 @@
   "courses": [
     {
       "subject": {
-        "name": "Wychowanie fizyczne",
-        "abbre": "W-F",
+        "name": "Fizyka",
+        "abbre": "FIZ",
         "isMandatory": true
       },
       "teacher": {
-        "name": "Janusz",
-        "surrname": "Warchlak",
+        "name": "Anna",
+        "surrname": "Kowal",
         "coursesTaught": []
       },
-      "type": "Muscle",
-      "duration": "60",
+      "type": "Science",
+      "duration": "60min",
       "hoursReq": "8",
-      "id": 2
+      "id": 3
     }
   ],
   "studentGroups": [
     {
-        "name": "3F",
-        "additionalCourses": []
+      "name": "3F",
+      "additionalCourses": []
     },
     {
-        "name": "1B",
-        "additionalCourses": []
+      "name": "1B",
+      "additionalCourses": []
     },
     {
-        "name": "2B",
-        "additionalCourses": []
+      "name": "2B",
+      "additionalCourses": []
     }
-]
+  ]
 }
