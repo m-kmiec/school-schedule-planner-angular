@@ -5,6 +5,8 @@ export class Course{
     constructor(
         public subject: Subject,
         public teacher: Teacher,
-        public duration: string
-   ){}
+        public type: string,
+        public duration: number,
+        public hoursReq: number
+    ){}
 }

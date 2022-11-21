@@ -7,6 +7,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { CourseListComponent } from './course-list/course-list.component';
+import { CourseDetailsComponent } from './course-details/course-details.component';
+import { RouterModule } from '@angular/router';
+import { AddCourseComponent } from './add-course/add-course.component';
+import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { CourseTableComponent } from './course-table/course-table.component';
 import { MatTableModule } from '@angular/material/table'
@@ -17,6 +22,9 @@ import { CoursesService } from './data/courses.service';
   declarations: [
     AppComponent,
     NavbarComponent,
+    CourseListComponent,
+    CourseDetailsComponent,
+    AddCourseComponent,
     CourseTableComponent,
   ],
   imports: [
@@ -26,8 +34,10 @@ import { CoursesService } from './data/courses.service';
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
-    MatTableModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule,
+    FormsModule,
+    MatTableModule
   ],
   providers: [CoursesService],
   bootstrap: [AppComponent]

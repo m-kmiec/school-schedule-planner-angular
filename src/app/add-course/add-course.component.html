@@ -1,0 +1,36 @@
+<div>
+    <label>Create new course!</label>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <p>
+            <label>Select subject:</label>
+            <select #selectElem (change)="setSelSub(selectElem.value)">
+                <option *ngFor="let sub of subjects" value="{{sub.id}}">
+                    {{sub.name}}
+                </option>
+            </select>
+        </p>
+        <p>
+            <label>Select teacher:</label>
+            <select #selectElem (change)="setSelTeacher(selectElem.value)">
+                <option *ngFor="let teach of teachers" value="{{teach.surrname}}">
+                    {{teach.name}} {{teach.surrname}}
+                </option>
+            </select>
+        </p>
+        <p>
+            <label>Type:</label>
+            <input name="type">
+        </p>
+        <p>
+            <label>Duration:</label>
+            <input name="duration">
+        </p>
+        <p>
+            <label>Hours required:</label>
+            <input name="hoursReq">
+        </p>
+        <p>
+            <input type ="submit" value="Submit">
+        </p>
+    </form>
+</div>
