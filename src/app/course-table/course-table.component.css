@@ -1,7 +1,23 @@
-.mat-column-duration {
+.mat-column-Duration {
     padding-right: 20px;
 }
 
-.mat-column-subjectName {
+.mat-column-Monday {
+    padding-right: 20px;
+}
+
+.mat-column-Tuesday {
+    padding-right: 20px;
+}
+
+.mat-column-Wednesday {
+    padding-right: 20px;
+}
+
+.mat-column-Thursday {
+    padding-right: 20px;
+}
+
+.mat-column-Friday {
     padding-right: 20px;
 }
