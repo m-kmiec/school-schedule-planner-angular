@@ -1,32 +1,46 @@
-import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 import { SUBJECTS } from '../database/list-of-subjects';
 import { TEACHERS } from '../database/list-of-teachers';
 import { Course } from '../models/Course';
 import { Subject } from '../models/Subject';
 import { Teacher } from '../models/Teacher';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { CoursesService } from '../data/courses.service';
+
 
 @Component({
   selector: 'app-add-course',
   templateUrl: './add-course.component.html',
   styleUrls: ['./add-course.component.css']
 })
-export class AddCourseComponent {
-    public subjects: Subject[] = SUBJECTS;
-    public teachers: Teacher[] = TEACHERS;
-    public selSub: Subject = this.subjects[0];
-    public selTeach: Teacher = this.teachers[0];
+export class AddCourseComponent implements OnInit {
+  public courseForm !: FormGroup;
+  public subjects: Subject[] = SUBJECTS;
+  public teachers: Teacher[] = TEACHERS;
 
-    public setSelSub(index: string):void{
-      this.selSub = this.subjects[parseInt(index)];
-    }
+  constructor(private formBuilder: FormBuilder, private coursesService: CoursesService) { }
 
-    public setSelTeacher(index: string):void{
-      this.selTeach = this.teachers.find(t => t.surrname == index) as Teacher;
+  ngOnInit(): void {
+    this.courseForm = this.formBuilder.group({
+      subject: ['', Validators.required],
+      teacher: ['', Validators.required],
+      type: ['', Validators.required],
+      duration: ['', Validators.required],
+      hoursReq: ['', Validators.required],
+    })
+  }
+  onSubmit() {
+    console.log(this.courseForm.value);
+    if (this.courseForm.valid) {
+      this.coursesService.addCourse(this.courseForm.value).
+        subscribe({
+          next: (res) => {
+            alert("Added course!")
+          },
+          error: () => {
+            alert("Error while adding the course.")
+          }
+        })
     }
-    onSubmit(f: NgForm){
-      let course = new Course(this.selSub,this.selTeach,f.value.startsAt,f.value.endsAt,f.value.hoursReq);
-       
-    }
+  }
 }
