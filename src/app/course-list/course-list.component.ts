@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Course } from '../models/Course';
 import { MatDialog } from '@angular/material/dialog';
-import { AddCourseComponent } from '../add-course/add-course.component';
+import { CourseDialogComponent } from '../course-dialog/course-dialog.component';
 import { CoursesService } from '../data/courses.service';
 
 @Component({
@@ -39,15 +39,53 @@ export class CourseListComponent implements OnInit{
     }
   ];
   displayedColumns: any[] = []; 
-  constructor(private dialog: MatDialog, private coursesService: CoursesService){}
+  constructor(
+    private dialog: MatDialog,
+     private coursesService: CoursesService,
+     ){}
+
+
     ngOnInit(){
       this.coursesService.getCourses().
         subscribe(data => this.courses = data);
       this.displayedColumns = this.columns.map(c => c.columnDef);
     }
+
+
   openDialog(){
-    this.dialog.open(AddCourseComponent, {
+    this.dialog.open(CourseDialogComponent, {
       width: "30%"
-    });
+    }).afterClosed().subscribe(val =>{
+      if(val ==='save'){
+        this.coursesService.getCourses().
+        subscribe(data => this.courses = data);
+      }
+    })
+  }
+
+  editCourse(row: any){
+    this.dialog.open(CourseDialogComponent,{
+      width: '30%',
+      data:row
+    }).afterClosed().subscribe(val =>{
+      if(val ==='update'){
+        this.coursesService.getCourses().
+        subscribe(data => this.courses = data);
+      }
+    })
+  }
+
+  deleteCourse(id:number){
+    this.coursesService.deleteCourse(id)
+    .subscribe({
+      next: (res) => {
+        alert("Course was deleted!");
+        this.coursesService.getCourses().
+        subscribe(data => this.courses = data);
+      },
+      error: () => {
+        alert("Error while deleting the course.")
+      }
+    })
   }
 }

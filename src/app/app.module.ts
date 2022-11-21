@@ -11,7 +11,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { CourseListComponent } from './course-list/course-list.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
 import { RouterModule } from '@angular/router';
-import { AddCourseComponent } from './add-course/add-course.component';
+import { CourseDialogComponent } from './course-dialog/course-dialog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { CourseTableComponent } from './course-table/course-table.component';
@@ -30,8 +30,8 @@ import { CoursesService } from './data/courses.service';
     NavbarComponent,
     CourseListComponent,
     CourseDetailsComponent,
-    AddCourseComponent,
-    CourseTableComponent,
+    CourseDialogComponent,
+    CourseTableComponent
   ],
   imports: [
     BrowserModule,
