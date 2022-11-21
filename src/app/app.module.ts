@@ -7,12 +7,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+
 import {MatIconModule} from '@angular/material/icon';
 import { CourseListComponent } from './course-list/course-list.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
 import { RouterModule } from '@angular/router';
 import { AddCourseComponent } from './add-course/add-course.component';
 import { FormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
+import { CourseTableComponent } from './course-table/course-table.component';
+import { MatTableModule } from '@angular/material/table'
 
 @NgModule({
   declarations: [
@@ -21,6 +25,7 @@ import { FormsModule } from '@angular/forms';
     CourseListComponent,
     CourseDetailsComponent,
     AddCourseComponent,
+    CourseTableComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +35,8 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule,
     MatIconModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
