@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Course } from '../models/Course';
-import { COURSES } from '../data/mock-courses';
+import { Course } from '../models/course';
+import { CoursesService } from '../data/courses.service';
 
 @Component({
   selector: 'app-course-table',
@@ -10,12 +10,14 @@ import { COURSES } from '../data/mock-courses';
 export class CourseTableComponent implements OnInit {
 
 
-  constructor() { }
+  constructor(private coursesService: CoursesService) { }
 
-  Courses : Course[] = COURSES;
+  courses : Course[] = [];
   displayedColumns: string[] = ['duration', 'subjectName', 'teacherPersonals', ];
  
   ngOnInit(): void {
+    this.coursesService.getCourses().
+        subscribe(data => this.courses = data);
   }
 
 }

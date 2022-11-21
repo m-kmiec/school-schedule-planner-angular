@@ -1,5 +1,5 @@
-import { Teacher } from "./Teacher";
-import {Subject} from "./Subject";
+import { Teacher } from "./teacher";
+import {Subject} from "./subject";
 
 export class Course{
     constructor(

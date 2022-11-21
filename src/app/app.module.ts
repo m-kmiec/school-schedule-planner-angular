@@ -10,6 +10,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { CourseTableComponent } from './course-table/course-table.component';
 import { MatTableModule } from '@angular/material/table'
+import { HttpClientModule } from '@angular/common/http';
+import { CoursesService } from './data/courses.service';
 
 @NgModule({
   declarations: [
@@ -24,9 +26,10 @@ import { MatTableModule } from '@angular/material/table'
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
-    MatTableModule
+    MatTableModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [CoursesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
