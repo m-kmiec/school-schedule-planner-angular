@@ -10,7 +10,6 @@ import { Router } from '@angular/router';
 })
 export class CourseListComponent implements OnInit{
   courses: Course[]=[];
-  //subjects: Subject[] = SUBJECTS;
   constructor(
     private router: Router
     ){}

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Course } from '../models/Course';
-import { COURSES } from '../data/mock-courses';
 
 @Component({
   selector: 'app-course-table',
@@ -12,7 +11,7 @@ export class CourseTableComponent implements OnInit {
 
   constructor() { }
 
-  Courses : Course[] = COURSES;
+  Courses : Course[] = [];
   displayedColumns: string[] = ['duration', 'subjectName', 'teacherPersonals', ];
  
   ngOnInit(): void {
