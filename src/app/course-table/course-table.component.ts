@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Course } from '../models/Course';
 import { CoursesService } from '../data/courses.service';
+import { SelectionModel } from '@angular/cdk/collections';
 
 
 @Component({
@@ -13,9 +14,11 @@ export class CourseTableComponent implements OnInit {
 
   constructor(private coursesService: CoursesService) { }
 
-  courses : Course[] = [];
+  courses: Course[] = [];
 
-  displayedColumns: string[] = ['duration', 'subjectName', 'teacherPersonals', ];
+  selection: SelectionModel<Course> = new SelectionModel<Course>(false, []);
+
+  displayedColumns: string[] = ['Duration', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday' ];
  
   ngOnInit(): void {
     this.coursesService.getCourses().

@@ -40,7 +40,7 @@
                 "surrname": "Johnston",
                 "coursesTaught": []
             },
-            "duration": "9: 40 - 10: 35"
+            "duration": "9:40 - 10:35"
         },
         {
             "subject": {
@@ -54,7 +54,7 @@
                 "surrname": "Monaghan",
                 "coursesTaught": []
             },
-            "duration": "10: 55 - 11: 40"
+            "duration": "10:55 - 11:40"
         },
         {
             "subject": {
@@ -68,7 +68,7 @@
                 "surrname": "Metcalfe",
                 "coursesTaught": []
             },
-            "duration": "11: 50 - 12: 35"
+            "duration": "11:50 - 12:35"
         }
     ]
 }
