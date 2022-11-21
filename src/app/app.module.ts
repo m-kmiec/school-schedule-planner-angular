@@ -15,7 +15,7 @@ import { AddCourseComponent } from './add-course/add-course.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { CourseTableComponent } from './course-table/course-table.component';
-import { MatTableModule } from '@angular/material/table'
+import { MatTableModule } from '@angular/material/table';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialogModule } from "@angular/material/dialog";
 import { MatInputModule} from "@angular/material/input";
@@ -49,7 +49,7 @@ import { CoursesService } from './data/courses.service';
     MatInputModule,
     MatDialogModule,
     MatCardModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
     HttpClientModule,
     RouterModule,
 

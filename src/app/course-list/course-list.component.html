@@ -1,7 +1,25 @@
-<p>Lista przedmiotów</p>>
-<ol>
-    <button (click)="openDialog()">Dodaj kurs!</button>
-    <ng-container *ngFor="let course of courses">    
-       <app-course-details [course]="course"></app-course-details>    
+<table mat-table [dataSource]="courses" class="mat-elevation-z8 courses-table">
+    <ng-container *ngFor="let column of columns" [matColumnDef]="column.columnDef">
+      <th mat-header-cell *matHeaderCellDef>
+        {{column.header}}
+      </th>
+      <td mat-cell *matCellDef="let row">
+        {{column.cell(row)}}
+      </td>
     </ng-container>
-</ol>
+
+    <ng-container matColumnDef="actionButtons">
+      <th mat-header-cell *mat-icon-button color="primary">Action</th>
+      <td mat-cell *matCellDef="let row">
+          <button mat-icon-button color="primary">
+              <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn">
+              <mat-icon>delete</mat-icon>
+          </button>
+      </td>
+  </ng-container>
+
+	<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+	<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>

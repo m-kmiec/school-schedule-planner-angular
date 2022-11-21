@@ -13,4 +13,8 @@ export class CoursesService {
     getCourses(): Observable<Course[]> {
         return this.http.get<Course[]>(this.url + "/courses");
     }
+
+    addCourse(data: any) {
+        return this.http.post<any>(this.url + "/courses",data)
+    }
 }
