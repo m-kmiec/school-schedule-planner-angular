@@ -17,6 +17,9 @@ import { CourseTableComponent } from './course-table/course-table.component';
 import { MatTableModule } from '@angular/material/table'
 import { HttpClientModule } from '@angular/common/http';
 import { CoursesService } from './data/courses.service';
+import { HomePageComponent } from './home-page/home-page.component';
+import { StudentGroupSelectComponent } from './student-group-select/student-group-select.component';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -26,6 +29,8 @@ import { CoursesService } from './data/courses.service';
     CourseDetailsComponent,
     AddCourseComponent,
     CourseTableComponent,
+    HomePageComponent,
+    StudentGroupSelectComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +42,8 @@ import { CoursesService } from './data/courses.service';
     HttpClientModule,
     RouterModule,
     FormsModule,
-    MatTableModule
+    MatTableModule,
+    MatSelectModule
   ],
   providers: [CoursesService],
   bootstrap: [AppComponent]

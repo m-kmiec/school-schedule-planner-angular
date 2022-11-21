@@ -70,5 +70,19 @@
             },
             "duration": "11:50 - 12:35"
         }
+    ],
+    "studentGroups": [
+        {
+            "name": "3F",
+            "additionalCourses": []
+        },
+        {
+            "name": "1B",
+            "additionalCourses": []
+        },
+        {
+            "name": "2B",
+            "additionalCourses": []
+        }
     ]
 }

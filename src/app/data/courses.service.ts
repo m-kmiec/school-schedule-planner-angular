@@ -2,6 +2,7 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { Course } from "../models/Course";
+import { StudentGroup } from "../models/studentsGroup";
 
 @Injectable()
 export class CoursesService {
@@ -12,5 +13,9 @@ export class CoursesService {
 
     getCourses(): Observable<Course[]> {
         return this.http.get<Course[]>(this.url + "/courses");
+    }
+
+    getStudentGroups(): Observable<StudentGroup[]> {
+        return this.http.get<StudentGroup[]>(this.url + "/studentGroups"); 
     }
 }

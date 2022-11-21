@@ -1,0 +1,11 @@
+<mat-form-field appearance="fill" class="mat-form-field">
+    <mat-label> Students' group </mat-label>
+    <mat-select>
+      <mat-option *ngFor="let studentGroup of studentGroups" [value]="studentGroup.name"> 
+        {{studentGroup.name}}
+    </mat-option>
+    </mat-select>
+</mat-form-field>
+  
+
+  
