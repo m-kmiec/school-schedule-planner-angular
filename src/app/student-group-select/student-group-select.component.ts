@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Service } from '../data/data.service';
 import { StudentGroup } from '../models/studentsGroup';
 
@@ -8,6 +8,8 @@ import { StudentGroup } from '../models/studentsGroup';
   styleUrls: ['./student-group-select.component.css']
 })
 export class StudentGroupSelectComponent implements OnInit {
+
+  selectedStudentGroup?: string;
 
   studentGroups: StudentGroup[] = []
 

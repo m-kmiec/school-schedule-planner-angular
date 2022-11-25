@@ -15,6 +15,38 @@
       "duration": "45 min",
       "hoursReq": "8",
       "id": 3
+    },
+    {
+      "subject": {
+        "name": "Mathematics",
+        "abbre": "MATH",
+        "isMandatory": true
+      },
+      "teacher": {
+        "name": "Licoln",
+        "surrname": "Dean",
+        "coursesTaught": []
+      },
+      "type": "maths",
+      "duration": "8:00 - 8:45",
+      "hoursReq": "5",
+      "id": 4
+    },
+    {
+      "subject": {
+        "name": "Biology",
+        "abbre": "BIO",
+        "isMandatory": true
+      },
+      "teacher": {
+        "name": "Tahlia",
+        "surrname": "Benson",
+        "coursesTaught": []
+      },
+      "type": "science",
+      "duration": "8:00 - 8:45",
+      "hoursReq": "4",
+      "id": 5
     }
   ],
   "studentGroups": [
