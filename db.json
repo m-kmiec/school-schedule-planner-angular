@@ -2,17 +2,17 @@
   "courses": [
     {
       "subject": {
-        "name": "Fizyka",
-        "abbre": "FIZ",
+        "name": "Physics",
+        "abbre": "PHS",
         "isMandatory": true
       },
       "teacher": {
-        "name": "Anna",
-        "surrname": "Kowal",
+        "name": "Tony",
+        "surrname": "Arias",
         "coursesTaught": []
       },
       "type": "Science",
-      "duration": "60min",
+      "duration": "45 min",
       "hoursReq": "8",
       "id": 3
     }
@@ -29,6 +29,95 @@
     {
       "name": "2B",
       "additionalCourses": []
+    }
+  ],
+  "subjects": [
+    {
+      "name": "Mathematics",
+      "abbre": "MATH",
+      "isMandatory": true
+    },
+    {
+      "name": "Physics",
+      "abbre": "PHYS",
+      "isMandatory": true
+    },
+    {
+      "name": "Biology",
+      "abbre": "BIO",
+      "isMandatory": true
+    },
+    {
+      "name": "Chemistry",
+      "abbre": "CHEM",
+      "isMandatory": true
+    },
+    {
+      "name": "Polish",
+      "abbre": "POL",
+      "isMandatory": true
+    },
+    {
+      "name": "English",
+      "abbre": "ENG",
+      "isMandatory": true
+    },
+    {
+      "name": "History",
+      "abbre": "HIS",
+      "isMandatory": true
+    },
+    {
+      "name": "Physical Education",
+      "abbre": "PE",
+      "isMandatory": true
+    },
+    {
+      "name": "Advanced Mathematics",
+      "abbre": "aMATH",
+      "isMandatory": false
+    },
+    {
+      "name": "Advanced Physics",
+      "abbre": "aPHYS",
+      "isMandatory": false
+    },
+    {
+      "name": "Advanced Chemistry",
+      "abbre": "aCHEM",
+      "isMandatory": false
+    },
+    {
+      "name": "Advanced Biology",
+      "abbre": "aBIO",
+      "isMandatory": false
+    },
+    {
+      "name": "Advanced Polish",
+      "abbre": "aPOL",
+      "isMandatory": false
+    },
+    {
+      "name": "Advanced History",
+      "abbre": "aHIS",
+      "isMandatory": false
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Tahlia",
+      "surrname": "Benson",
+      "coursesTaught": []
+    },
+    {
+      "name": "Licoln",
+      "surrname": "Dean",
+      "coursesTaught": []
+    },
+    {
+      "name": "Aleena",
+      "surrname": "Whitaker",
+      "coursesTaught": []
     }
   ]
 }

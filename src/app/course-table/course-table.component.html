@@ -1,33 +1,33 @@
-<table mat-table class="courses-table mat-elevation-z8" [dataSource]="courses">
+<table mat-table class="courses-table mat-elevation-z8" [dataSource]="timestamps">
 
 <ng-container matColumnDef="Duration">
     <th mat-header-cell *matHeaderCellDef></th>
-    <td mat-cell *matCellDef="let course"> {{course.duration}} </td>
+    <td mat-cell *matCellDef="let timestamp"> {{timestamp}} </td>
 </ng-container>
 
 <ng-container matColumnDef="Monday">
     <th mat-header-cell *matHeaderCellDef> Monday </th>
-    <td mat-cell *matCellDef="let course"> {{course.subject.name}} </td>
+    <td mat-cell *matCellDef="let course">  </td>
 </ng-container>
 
 <ng-container matColumnDef="Tuesday">
     <th mat-header-cell *matHeaderCellDef> Tuesday </th>
-    <td mat-cell *matCellDef="let course">  {{course.subject.name}} </td>
+    <td mat-cell *matCellDef="let course">   </td>
 </ng-container>
 
 <ng-container matColumnDef="Wednesday">
     <th mat-header-cell *matHeaderCellDef> Wednesday </th>
-    <td mat-cell *matCellDef="let course"> {{course.subject.name}} </td>
+    <td mat-cell *matCellDef="let course">  </td>
 </ng-container>
 
 <ng-container matColumnDef="Thursday">
     <th mat-header-cell *matHeaderCellDef> Thursday </th>
-    <td mat-cell *matCellDef="let course"> {{course.subject.name}} </td>
+    <td mat-cell *matCellDef="let course"> </td>
 </ng-container>
 
 <ng-container matColumnDef="Friday">
     <th mat-header-cell *matHeaderCellDef> Friday </th>
-    <td mat-cell *matCellDef="let course"> {{course.subject.name}} </td>
+    <td mat-cell *matCellDef="let course">  </td>
 </ng-container>
 
 <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
