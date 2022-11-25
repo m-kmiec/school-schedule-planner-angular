@@ -19,7 +19,6 @@ export class CourseDialogComponent implements OnInit {
   public teachers: Teacher[] = TEACHERS;
 
   constructor(private formBuilder: FormBuilder,
-     private coursesService: Service,
      @Inject(MAT_DIALOG_DATA) public editData: any,
      private dialogRef: MatDialogRef<CourseDialogComponent>
      ) { }
@@ -44,7 +43,7 @@ export class CourseDialogComponent implements OnInit {
   addCourse() {
     if(!this.editData){
       if (this.courseForm.valid) {
-        this.coursesService.addCourse(this.courseForm.value).
+        Service.addCourse(this.courseForm.value).
           subscribe({
             next: (res) => {
               alert("Added course!")
@@ -62,7 +61,7 @@ export class CourseDialogComponent implements OnInit {
     
   }
   updateCourse(){
-    this.coursesService.editCourse(this.courseForm.value, this.editData.id).
+    Service.editCourse(this.courseForm.value, this.editData.id).
     subscribe({
       next: (res) => {
         alert("Edit course!");
