@@ -32,7 +32,7 @@ export class GroupListComponent implements OnInit {
 
 
     ngOnInit(){
-      this.service.getGroups().
+      this.service.getStudentGroups().
         subscribe(data => this.groups = data);
       this.displayedColumns = this.columns.map(c => c.columnDef);
     }
@@ -43,7 +43,7 @@ export class GroupListComponent implements OnInit {
       width: "30%"
     }).afterClosed().subscribe(val =>{
       if(val ==='save'){
-        this.service.getGroups().
+        this.service.getStudentGroups().
         subscribe(data => this.groups = data);
       }
     })
@@ -55,7 +55,7 @@ export class GroupListComponent implements OnInit {
       data:row
     }).afterClosed().subscribe(val =>{
       if(val ==='update'){
-        this.service.getGroups().
+        this.service.getStudentGroups().
         subscribe(data => this.groups = data);
       }
     })
@@ -66,7 +66,7 @@ export class GroupListComponent implements OnInit {
     .subscribe({
       next: (res) => {
         alert("Group was deleted!");
-        this.service.getGroups().
+        this.service.getStudentGroups().
         subscribe(data => this.groups = data);
       },
       error: () => {

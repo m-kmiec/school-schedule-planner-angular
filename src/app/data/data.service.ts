@@ -29,6 +29,7 @@ export class Service {
     getStudentGroups(): Observable<StudentGroup[]> {
         return this.http.get<StudentGroup[]>(this.url + "/studentGroups"); 
     }
+
     addCourse(data: any) {
         return this.http.post<any>(this.url + "/courses",data);
     }
