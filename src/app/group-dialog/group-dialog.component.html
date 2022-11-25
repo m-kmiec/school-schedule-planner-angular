@@ -1,1 +1,17 @@
-<p>group-dialog works!</p>
+<h1 mat-form-title>Create new group!</h1>
+<div mat-form-content>
+    <label>Create new group!</label>
+    <form [formGroup]="groupForm">
+        <mat-form-field appearance="outline">
+            <mat-label>Name:</mat-label>
+            <input matInput formControlName="name" name="name">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Courses: </mat-label>
+            <mat-select formControlName="courseForm" name="courseForm" multiple>
+              <mat-option *ngFor="let course of courses" [value]="course">{{course.subject.name}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        <button mat-raised-button color="primary" (click)="addGroup()">Add</button>
+    </form>
+</div>
