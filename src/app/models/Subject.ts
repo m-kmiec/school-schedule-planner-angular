@@ -1,32 +1,32 @@
 export class Subject{
     constructor(
-        private name: string,
-        private abbre: string,
-        private isMandatory: boolean = false
+        private _name: string,
+        private _abbre: string,
+        private _isMandatory: boolean = false
         ){}
 
-        public set _abbre(_abbre: string){
-            this.abbre = _abbre;
+        public set abbre(abbre: string){
+            this._abbre = abbre;
         }
 
-        public get _abbre(){
-            return this.abbre;
+        public get abbre(){
+            return this._abbre;
         }
 
-        public set _name(_name: string){
-            this.name = _name;
+        public set name(name: string){
+            this._name = name;
         }
 
-        public get _name(){
-            return this.name;
+        public get name(){
+            return this._name;
         }
 
 
-        public set _mandatory(mandatory: boolean){
-            this.isMandatory = mandatory;
+        public set mandatory(mandatory: boolean){
+            this._isMandatory = mandatory;
         }
 
-        public get _mandatory(){
-            return this.isMandatory;
+        public get mandatory(){
+            return this._isMandatory;
         }
 }
