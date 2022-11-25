@@ -1,6 +1,4 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { SUBJECTS } from '../database/list-of-subjects';
-import { TEACHERS } from '../database/list-of-teachers';
 import { Subject } from '../models/Subject';
 import { Teacher } from '../models/Teacher';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
@@ -15,13 +13,18 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 })
 export class CourseDialogComponent implements OnInit {
   public courseForm !: FormGroup;
-  public subjects: Subject[] = SUBJECTS;
-  public teachers: Teacher[] = TEACHERS;
+  public subjects: Subject[] = [];
+  public teachers: Teacher[] = [];
 
   constructor(private formBuilder: FormBuilder,
      @Inject(MAT_DIALOG_DATA) public editData: any,
      private dialogRef: MatDialogRef<CourseDialogComponent>
-     ) { }
+     ) {
+      Service.getTeachers().
+      subscribe(data => this.teachers = data);
+      Service.getSubjects().
+      subscribe(data => this.subjects = data);
+      }
 
   ngOnInit(): void {
     this.courseForm = this.formBuilder.group({

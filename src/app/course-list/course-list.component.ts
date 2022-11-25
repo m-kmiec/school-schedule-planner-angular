@@ -40,13 +40,12 @@ export class CourseListComponent implements OnInit{
   ];
   displayedColumns: any[] = []; 
   constructor(
-    private dialog: MatDialog,
-     private coursesService: Service,
+    private dialog: MatDialog
      ){}
 
 
     ngOnInit(){
-      this.coursesService.getCourses().
+      Service.getCourses().
         subscribe(data => this.courses = data);
       this.displayedColumns = this.columns.map(c => c.columnDef);
     }
@@ -57,7 +56,7 @@ export class CourseListComponent implements OnInit{
       width: "30%"
     }).afterClosed().subscribe(val =>{
       if(val ==='save'){
-        this.coursesService.getCourses().
+        Service.getCourses().
         subscribe(data => this.courses = data);
       }
     })
@@ -69,18 +68,18 @@ export class CourseListComponent implements OnInit{
       data:row
     }).afterClosed().subscribe(val =>{
       if(val ==='update'){
-        this.coursesService.getCourses().
+        Service.getCourses().
         subscribe(data => this.courses = data);
       }
     })
   }
 
   deleteCourse(id:number){
-    this.coursesService.deleteCourse(id)
+    Service.deleteCourse(id)
     .subscribe({
       next: (res) => {
         alert("Course was deleted!");
-        this.coursesService.getCourses().
+        Service.getCourses().
         subscribe(data => this.courses = data);
       },
       error: () => {
