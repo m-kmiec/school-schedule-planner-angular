@@ -4,7 +4,7 @@ import { TEACHERS } from '../database/list-of-teachers';
 import { Subject } from '../models/Subject';
 import { Teacher } from '../models/Teacher';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { CoursesService } from '../data/courses.service';
+import { Service } from '../data/data.service';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 
@@ -19,7 +19,7 @@ export class CourseDialogComponent implements OnInit {
   public teachers: Teacher[] = TEACHERS;
 
   constructor(private formBuilder: FormBuilder,
-     private coursesService: CoursesService,
+     private coursesService: Service,
      @Inject(MAT_DIALOG_DATA) public editData: any,
      private dialogRef: MatDialogRef<CourseDialogComponent>
      ) { }

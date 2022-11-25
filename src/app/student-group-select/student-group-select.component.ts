@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CoursesService } from '../data/courses.service';
+import { Service } from '../data/data.service';
 import { StudentGroup } from '../models/studentsGroup';
 
 @Component({
@@ -11,7 +11,7 @@ export class StudentGroupSelectComponent implements OnInit {
 
   studentGroups: StudentGroup[] = []
 
-  constructor(private coursesService: CoursesService) { }
+  constructor(private coursesService: Service) { }
 
   ngOnInit(): void {
     this.coursesService.getStudentGroups().

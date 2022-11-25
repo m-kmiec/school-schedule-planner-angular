@@ -21,7 +21,7 @@ import { MatDialogModule } from "@angular/material/dialog";
 import { MatInputModule } from "@angular/material/input";
 import { MatCard, MatCardModule } from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
-import { CoursesService } from './data/courses.service';
+import { Service } from './data/data.service';
 import { HomePageComponent } from './home-page/home-page.component';
 import { StudentGroupSelectComponent } from './student-group-select/student-group-select.component';
 
@@ -61,7 +61,7 @@ import { StudentGroupSelectComponent } from './student-group-select/student-grou
     MatTableModule,
     MatSelectModule
   ],
-  providers: [CoursesService],
+  providers: [Service],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

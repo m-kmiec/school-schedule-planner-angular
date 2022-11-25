@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Course } from '../models/Course';
 import { MatDialog } from '@angular/material/dialog';
 import { CourseDialogComponent } from '../course-dialog/course-dialog.component';
-import { CoursesService } from '../data/courses.service';
+import { Service } from '../data/data.service';
 
 @Component({
   selector: 'app-course-list',
@@ -41,7 +41,7 @@ export class CourseListComponent implements OnInit{
   displayedColumns: any[] = []; 
   constructor(
     private dialog: MatDialog,
-     private coursesService: CoursesService,
+     private coursesService: Service,
      ){}
 
 

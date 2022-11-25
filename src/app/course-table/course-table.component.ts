@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Course } from '../models/Course';
-import { CoursesService } from '../data/courses.service';
+import { Service } from '../data/data.service';
 
 @Component({
   selector: 'app-course-table',
@@ -9,14 +9,14 @@ import { CoursesService } from '../data/courses.service';
 })
 export class CourseTableComponent implements OnInit {
 
-  constructor(private coursesService: CoursesService) { }
+  constructor() { }
 
   courses: Course[] = [];
 
   displayedColumns: string[] = ['Duration', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday' ];
  
   ngOnInit(): void {
-    this.coursesService.getCourses().
+    Service.getCourses().
         subscribe(data => this.courses = data);
   }
 
