@@ -11,20 +11,8 @@ import { StudentGroup } from '../models/studentsGroup';
   styleUrls: ['./group-list.component.css']
 })
 export class GroupListComponent implements OnInit {
+  displayedColumns: string[] = ['name','courses','actionButtons'];
   groups: StudentGroup[] = [];
-  columns = [
-    {
-      columnDef: 'name',
-      header: 'Name',
-      cell: (group: StudentGroup) => `${group.name}`,
-    },
-    {
-      columnDef: 'courses',
-      header: 'Courses',
-      cell: (course: Course) => `${course.subject.name}`,
-    }
-  ];
-  displayedColumns: any[] = []; 
   constructor(
     private dialog: MatDialog,
     private service: Service
@@ -34,7 +22,6 @@ export class GroupListComponent implements OnInit {
     ngOnInit(){
       this.service.getStudentGroups().
         subscribe(data => this.groups = data);
-      this.displayedColumns = this.columns.map(c => c.columnDef);
     }
 
 
@@ -49,7 +36,7 @@ export class GroupListComponent implements OnInit {
     })
   }
 
-  editCourse(row: any){
+  editGroup(row: any){
     this.dialog.open(GroupDialogComponent,{
       width: '30%',
       data:row
@@ -61,7 +48,7 @@ export class GroupListComponent implements OnInit {
     })
   }
 
-  deleteCourse(id:number){
+  deleteGroup(id:number){
     this.service.deleteCourse(id)
     .subscribe({
       next: (res) => {
