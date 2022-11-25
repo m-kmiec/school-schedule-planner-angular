@@ -7,10 +7,10 @@ import { CourseListComponent } from './course-list/course-list.component';
 import { HomePageComponent } from './home-page/home-page.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomePageComponent},
+  { path: 'home', component: HomePageComponent },
   { path: "subjects", component: AppComponent },
-  {path: "courses", component: CourseListComponent},
-  {path: "addCourse", component: CourseDialogComponent}
+  { path: "courses", component: CourseListComponent },
+  { path: "addCourse", component: CourseDialogComponent }
 ];
 
 @NgModule({
