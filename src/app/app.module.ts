@@ -24,6 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { Service } from './data/data.service';
 import { HomePageComponent } from './home-page/home-page.component';
 import { StudentGroupSelectComponent } from './student-group-select/student-group-select.component';
+import { GroupListComponent } from './group-list/group-list.component';
+import { GroupDialogComponent } from './group-dialog/group-dialog.component';
 
 
 @NgModule({
@@ -36,7 +38,9 @@ import { StudentGroupSelectComponent } from './student-group-select/student-grou
     HomePageComponent,
     StudentGroupSelectComponent,
     CourseDialogComponent,
-    CourseTableComponent
+    CourseTableComponent,
+    GroupListComponent,
+    GroupDialogComponent
   ],
   imports: [
     BrowserModule,

@@ -5,12 +5,16 @@ import { CourseDialogComponent } from './course-dialog/course-dialog.component';
 import { AppComponent } from './app.component';
 import { CourseListComponent } from './course-list/course-list.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { GroupListComponent } from './group-list/group-list.component';
+import { GroupDialogComponent } from './group-dialog/group-dialog.component';
 
 const routes: Routes = [
   { path: 'home', component: HomePageComponent },
   { path: "subjects", component: AppComponent },
   { path: "courses", component: CourseListComponent },
-  { path: "addCourse", component: CourseDialogComponent }
+  { path: "addCourse", component: CourseDialogComponent },
+  { path: "groups", component: GroupListComponent },
+  { path: "groupsDialog", component: GroupDialogComponent }
 ];
 
 @NgModule({
