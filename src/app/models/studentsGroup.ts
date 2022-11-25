@@ -8,7 +8,10 @@ export class StudentGroup{
         public additionalCourses: Course[],
         private service: Service
     ){
-        Service.getSubjects().
-        subscribe(data => this.additionalCourses = data);
+        this.service.getCourses().
+        subscribe(data => {
+            this.additionalCourses = data;
+            this.additionalCourses = this.additionalCourses.filter(e => e.subject.mandatory==false)
+        })
     }
 }

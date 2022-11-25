@@ -9,7 +9,7 @@ import { Service } from '../data/data.service';
 })
 export class CourseTableComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: Service) { }
 
   courses: Course[] = [];
 
@@ -18,7 +18,7 @@ export class CourseTableComponent implements OnInit {
   displayedColumns: string[] = ['Duration', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
 
   ngOnInit(): void {
-    Service.getCourses().
+    this.service.getCourses().
         subscribe(data => this.courses = data);
   }
 
