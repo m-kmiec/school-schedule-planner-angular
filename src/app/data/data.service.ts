@@ -34,8 +34,16 @@ export class Service {
         return this.http.post<any>(this.url + "/courses",data);
     }
 
+    addGroup(data: any) {
+        return this.http.post<any>(this.url + "/studentGroups",data);
+    }
+
     editCourse(data: any, id:number){
         return this.http.put<any>(this.url + "/courses/"+id,data);
+    }
+
+    editGroup(data: any, id:number){
+        return this.http.put<any>(this.url + "/studentGroups/"+id,data);
     }
 
     deleteCourse(id: number){

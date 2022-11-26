@@ -13,7 +13,7 @@ import { Course } from '../models/Course';
 export class GroupDialogComponent implements OnInit {
   public groupForm !: FormGroup;
   public courses: Course[] = [];
-  public courseForm = new FormControl();
+  courseForm = new FormControl('');
 
   constructor(private formBuilder: FormBuilder,
      @Inject(MAT_DIALOG_DATA) public editData: any,
@@ -23,25 +23,25 @@ export class GroupDialogComponent implements OnInit {
       this.service.getCourses().
       subscribe(data => {
         this.courses = data;
-        //this.courses = this.courses.filter(e => e.subject.mandatory == false );
+        this.courses.filter(e => e.subject.mandatory == false);     
       });
       }
 
   ngOnInit(): void {
     this.groupForm = this.formBuilder.group({
       name: ['', Validators.required],
-      courseForm: ['', Validators.required]
+      courses: this.courseForm
     })
 
     if(this.editData){
       this.groupForm.controls['name'].setValue(this.editData.subject);
-      this.groupForm.controls['courseForm'].setValue(this.editData.teacher);
+      this.groupForm.controls['courses'].setValue(this.editData.teacher);
     }
   }
   addGroup() {
     if(!this.editData){
       if (this.groupForm.valid) {
-        this.service.addCourse(this.groupForm.value).
+        this.service.addGroup(this.groupForm.value).
           subscribe({
             next: (res) => {
               alert("Added group!")
@@ -59,7 +59,7 @@ export class GroupDialogComponent implements OnInit {
     
   }
   updateGroup(){
-    this.service.editCourse(this.groupForm.value, this.editData.id).
+    this.service.editGroup(this.groupForm.value, this.editData.id).
     subscribe({
       next: (res) => {
         alert("Edit group!");

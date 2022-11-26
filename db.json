@@ -15,12 +15,45 @@
       "duration": "45 min",
       "hoursReq": "8",
       "id": 3
+    },
+    {
+      "subject": {
+        "name": "Advanced Chemistry",
+        "abbre": "aCHEM",
+        "isMandatory": false
+      },
+      "teacher": {
+        "name": "Aleena",
+        "surrname": "Whitaker",
+        "coursesTaught": []
+      },
+      "type": "Science",
+      "duration": "45min",
+      "hoursReq": "6",
+      "id": 4
     }
   ],
   "studentGroups": [
     {
       "name": "3F",
-      "additionalCourses": []
+      "additionalCourses": [
+        {
+          "subject": {
+            "_name": "Physics",
+            "_abbre": "PHS",
+            "_isMandatory": true
+          },
+          "teacher": {
+            "name": "Tony",
+            "surrname": "Arias",
+            "coursesTaught": []
+          },
+          "type": "Science",
+          "duration": "45 min",
+          "hoursReq": "8",
+          "id": 3
+        }
+      ]
     }
   ],
   "subjects": [

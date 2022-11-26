@@ -11,7 +11,7 @@ import { StudentGroup } from '../models/studentsGroup';
   styleUrls: ['./group-list.component.css']
 })
 export class GroupListComponent implements OnInit {
-  displayedColumns: string[] = ['name','courses','actionButtons'];
+  displayedColumns: string[] = ['name','additionalCourses','actionButtons'];
   groups: StudentGroup[] = [];
   constructor(
     private dialog: MatDialog,

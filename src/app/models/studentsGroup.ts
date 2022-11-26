@@ -5,7 +5,7 @@ import { Service } from '../data/data.service';
 export class StudentGroup{
     constructor(
         public name: string,
-        public additionalCourses: Course[]
+        public additionalCourses: Course[],
         // private service: Service
     ){
         // this.service.getCourses().
