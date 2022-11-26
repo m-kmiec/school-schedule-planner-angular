@@ -18,19 +18,35 @@
     },
     {
       "subject": {
-        "name": "Advanced Chemistry",
-        "abbre": "aCHEM",
-        "isMandatory": false
+        "name": "Mathematics",
+        "abbre": "MATH",
+        "isMandatory": true
       },
       "teacher": {
-        "name": "Aleena",
-        "surrname": "Whitaker",
+        "name": "Licoln",
+        "surrname": "Dean",
         "coursesTaught": []
       },
-      "type": "Science",
-      "duration": "45min",
-      "hoursReq": "6",
+      "type": "maths",
+      "duration": "8:00 - 8:45",
+      "hoursReq": "5",
       "id": 4
+    },
+    {
+      "subject": {
+        "name": "Biology",
+        "abbre": "BIO",
+        "isMandatory": true
+      },
+      "teacher": {
+        "name": "Tahlia",
+        "surrname": "Benson",
+        "coursesTaught": []
+      },
+      "type": "science",
+      "duration": "8:00 - 8:45",
+      "hoursReq": "4",
+      "id": 5
     }
   ],
   "studentGroups": [

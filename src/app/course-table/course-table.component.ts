@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Course } from '../models/Course';
 import { Service } from '../data/data.service';
+import { StudentGroup } from '../models/studentsGroup';
 
 @Component({
   selector: 'app-course-table',
@@ -10,6 +11,8 @@ import { Service } from '../data/data.service';
 export class CourseTableComponent implements OnInit {
 
   constructor(private service: Service) { }
+
+  @Input() studentGroup? : string;
 
   courses: Course[] = [];
 
@@ -21,6 +24,5 @@ export class CourseTableComponent implements OnInit {
     this.service.getCourses().
         subscribe(data => this.courses = data);
   }
-
 
 }
