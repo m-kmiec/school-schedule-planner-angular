@@ -47,12 +47,62 @@
       "duration": "8:00 - 8:45",
       "hoursReq": "4",
       "id": 5
+    },
+    {
+      "subject": {
+        "name": "Advanced Chemistry",
+        "abbre": "aCHEM",
+        "isMandatory": false
+      },
+      "teacher": {
+        "name": "Licoln",
+        "surrname": "Dean",
+        "coursesTaught": []
+      },
+      "type": "Science",
+      "duration": "45min",
+      "hoursReq": "4",
+      "id": 6
+    },
+    {
+      "subject": {
+        "name": "Advanced History",
+        "abbre": "aHIS",
+        "isMandatory": false
+      },
+      "teacher": {
+        "name": "Tahlia",
+        "surrname": "Benson",
+        "coursesTaught": []
+      },
+      "type": "Memory",
+      "duration": "45min",
+      "hoursReq": "3",
+      "id": 7
     }
   ],
   "studentGroups": [
     {
-      "name": "3F",
-      "additionalCourses": []
+      "name": "2A",
+      "additionalCourses": [
+        {
+          "subject": {
+            "name": "Advanced Chemistry",
+            "abbre": "aCHEM",
+            "isMandatory": false
+          },
+          "teacher": {
+            "name": "Licoln",
+            "surrname": "Dean",
+            "coursesTaught": []
+          },
+          "type": "Science",
+          "duration": "45min",
+          "hoursReq": "4",
+          "id": 6
+        }
+      ],
+      "id": 1
     }
   ],
   "subjects": [

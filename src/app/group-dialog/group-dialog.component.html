@@ -6,10 +6,10 @@
             <mat-label>Name:</mat-label>
             <input matInput formControlName="name" name="name">
         </mat-form-field>
-        <mat-form-field appearance="outline">
+        <mat-form-field appearance="fill">
             <mat-label>Courses: </mat-label>
-            <mat-select formControlName="courses" multiple>
-              <mat-option *ngFor="let course of courses" [value]="course">{{course.subject.name}}</mat-option>
+            <mat-select formControlName="additionalCourses" name="additionalCourses" multiple>
+              <mat-option *ngFor="let c of courses" [value]="c">{{c.subject.name}}</mat-option>
             </mat-select>
           </mat-form-field>
         <button mat-raised-button color="primary" (click)="addGroup()">Add</button>
