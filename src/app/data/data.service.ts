@@ -6,7 +6,6 @@ import { StudentGroup } from "../models/studentsGroup";
 import { Subject } from "../models/Subject";
 import { Teacher } from "../models/Teacher";
 
-
 @Injectable()
 export class Service {
 
@@ -28,6 +27,10 @@ export class Service {
 
     getStudentGroups(): Observable<StudentGroup[]> {
         return this.http.get<StudentGroup[]>(this.url + "/studentGroups"); 
+    }
+
+    getTimestamps() : Observable<string[]> {
+        return this.http.get<string[]>(this.url + "/timestamps");
     }
 
     addCourse(data: any) {
