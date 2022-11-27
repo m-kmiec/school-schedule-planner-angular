@@ -15,6 +15,8 @@ export class CourseDialogComponent implements OnInit {
   public courseForm !: FormGroup;
   public subjects: Subject[] = [];
   public teachers: Teacher[] = [];
+  public buttonName: string = "Add";
+  public labelName: string = "Add new course!";
 
   constructor(private formBuilder: FormBuilder,
      @Inject(MAT_DIALOG_DATA) public editData: any,
@@ -37,6 +39,8 @@ export class CourseDialogComponent implements OnInit {
     })
 
     if(this.editData){
+      this.buttonName = "Update";
+      this.labelName = "Edit course!"
       this.courseForm.controls['subject'].setValue(this.editData.subject);
       this.courseForm.controls['teacher'].setValue(this.editData.teacher);
       this.courseForm.controls['type'].setValue(this.editData.type);

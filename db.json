@@ -2,22 +2,6 @@
   "courses": [
     {
       "subject": {
-        "name": "Physics",
-        "abbre": "PHS",
-        "isMandatory": true
-      },
-      "teacher": {
-        "name": "Tony",
-        "surrname": "Arias",
-        "coursesTaught": []
-      },
-      "type": "Science",
-      "duration": "45 min",
-      "hoursReq": "8",
-      "id": 3
-    },
-    {
-      "subject": {
         "name": "Mathematics",
         "abbre": "MATH",
         "isMandatory": true

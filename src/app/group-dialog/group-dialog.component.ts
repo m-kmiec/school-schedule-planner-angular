@@ -3,7 +3,6 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Service } from '../data/data.service';
 import { Course } from '../models/Course';
-import { map } from 'rxjs/operators';
 
 
 @Component({
@@ -14,7 +13,8 @@ import { map } from 'rxjs/operators';
 export class GroupDialogComponent implements OnInit {
   public groupForm !: FormGroup;
   public courses: Course[] = [];
-  public mandatoryCourses: Course[] = [];
+  public labelName: string = "Add new group!";
+  public buttonName: string = "Add";
 
   constructor(private formBuilder: FormBuilder,
     @Inject(MAT_DIALOG_DATA) public editData: any,
@@ -24,7 +24,6 @@ export class GroupDialogComponent implements OnInit {
     this.service.getCourses().
     subscribe(data => {
       this.courses = data;
-      this.mandatoryCourses = this.courses.filter(e =>  e.subject.isMandatory === true);
       this.courses = this.courses.filter(e =>  e.subject.isMandatory === false);
     });
   }
@@ -36,6 +35,8 @@ export class GroupDialogComponent implements OnInit {
     })
 
     if (this.editData) {
+      this.labelName = "Edit group!";
+      this.buttonName = "Update";
       this.groupForm.controls['name'].setValue(this.editData.name);
       this.groupForm.controls['additionalCourses'].setValue(this.editData.additionalCourses);
     }
