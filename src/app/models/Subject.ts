@@ -22,11 +22,11 @@ export class Subject{
         }
 
 
-        public set mandatory(mandatory: boolean){
+        public set isMandatory(mandatory: boolean){
             this._isMandatory = mandatory;
         }
 
-        public get mandatory(){
+        public get isMandatory(){
             return this._isMandatory;
         }
 }

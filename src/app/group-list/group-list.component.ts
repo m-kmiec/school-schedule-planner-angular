@@ -49,7 +49,7 @@ export class GroupListComponent implements OnInit {
   }
 
   deleteGroup(id:number){
-    this.service.deleteCourse(id)
+    this.service.deleteGroup(id)
     .subscribe({
       next: (res) => {
         alert("Group was deleted!");

@@ -5,12 +5,12 @@ export class StudentGroup{
     constructor(
         public name: string,
         public additionalCourses: Course[],
-        // private service: Service
+         private service: Service
     ){
-        // this.service.getCourses().
-        // subscribe(data => {
-        //     this.additionalCourses = data;
-        //     this.additionalCourses = this.additionalCourses.filter(e => e.subject.mandatory==true)
-        // })
+        this.service.getCourses().
+        subscribe(data => {
+            this.additionalCourses = data;
+            this.additionalCourses = this.additionalCourses.filter(e => e.subject.isMandatory ===true)
+        })
     }
 }

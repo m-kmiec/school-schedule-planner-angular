@@ -49,5 +49,8 @@ export class Service {
     deleteCourse(id: number){
         return this.http.delete<any>(this.url + "/courses/"+id);
     }
+    deleteGroup(id: number){
+        return this.http.delete<any>(this.url + "/studentGroups/"+id);
+    }
 
 }
