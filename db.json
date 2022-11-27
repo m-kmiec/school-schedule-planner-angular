@@ -28,7 +28,7 @@
         "coursesTaught": []
       },
       "type": "maths",
-      "duration": "8:00 - 8:45",
+      "duration": "45 min",
       "hoursReq": "5",
       "id": 4
     },
@@ -142,6 +142,49 @@
       "name": "Aleena",
       "surrname": "Whitaker",
       "coursesTaught": []
+    }
+  ],
+  "timestamps": [
+    {
+      "timestamp": "8:00 - 8:45"
+    },
+    {
+      "timestamp": "8:55 - 9:40"
+    },
+    {
+      "timestamp":"9:50 - 10:35"
+    },
+    {
+      "timestamp":"10:55 - 11:40"
+    },
+    {
+      "timestamp":"11:50 - 12:35"
+    },
+    {
+      "timestamp":"12:45 - 13:30"
+    },
+    {
+      "timestamp":"13:40 - 14:25"
+    },
+    {
+      "timestamp":"14:40 - 16:10"
+    }
+  ],
+  "days" : [
+    {
+      "day": "Monday"
+    },
+    {
+      "day": "Tuesday"
+    },
+    {
+      "day": "Wednesday"
+    },
+    {
+      "day": "Thursday"
+    },
+    {
+      "day": "Friday"
     }
   ]
 }

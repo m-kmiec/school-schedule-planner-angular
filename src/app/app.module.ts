@@ -18,6 +18,8 @@ import { StudentGroupSelectComponent } from './student-group-select/student-grou
 import { GroupListComponent } from './group-list/group-list.component';
 import { GroupDialogComponent } from './group-dialog/group-dialog.component';
 import { MaterialModule } from './material/material.module';
+import { AddCourseForDayComponent } from './add-course-for-day/add-course-for-day.component';
+import { AddCourseForDayDialogComponent } from './add-course-for-day-dialog/add-course-for-day-dialog.component';
 
 
 @NgModule({
@@ -32,7 +34,8 @@ import { MaterialModule } from './material/material.module';
     CourseDialogComponent,
     CourseTableComponent,
     GroupListComponent,
-    GroupDialogComponent
+    GroupDialogComponent,
+    AddCourseForDayComponent,
   ],
   imports: [
     BrowserModule,

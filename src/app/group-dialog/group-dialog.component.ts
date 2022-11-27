@@ -23,19 +23,19 @@ export class GroupDialogComponent implements OnInit {
       this.service.getCourses().
       subscribe(data => {
         this.courses = data;
-        //this.courses = this.courses.filter(e => e.subject.mandatory == false );
+        this.courses = this.courses.filter(e => e.subject.mandatory == false );
       });
       }
 
   ngOnInit(): void {
     this.groupForm = this.formBuilder.group({
       name: ['', Validators.required],
-      courseForm: ['', Validators.required]
+      courses: ['', Validators.required]
     })
 
     if(this.editData){
-      this.groupForm.controls['name'].setValue(this.editData.subject);
-      this.groupForm.controls['courseForm'].setValue(this.editData.teacher);
+      this.groupForm.controls['name'].setValue(this.editData.name);
+      this.groupForm.controls['courses'].setValue(this.editData.courses);
     }
   }
   addGroup() {

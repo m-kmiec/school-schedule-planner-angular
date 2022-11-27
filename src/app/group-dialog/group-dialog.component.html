@@ -8,7 +8,7 @@
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>Courses: </mat-label>
-            <mat-select formControlName="courseForm" name="courseForm" multiple>
+            <mat-select formControlName="courses" multiple>
               <mat-option *ngFor="let course of courses" [value]="course">{{course.subject.name}}</mat-option>
             </mat-select>
           </mat-form-field>
