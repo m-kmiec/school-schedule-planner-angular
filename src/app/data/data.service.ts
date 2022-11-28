@@ -11,7 +11,7 @@ export class Service {
 
     private url: string = "http://localhost:3000"
 
-    constructor(  private http: HttpClient) {}
+    constructor(private http: HttpClient) { }
 
     getCourses(): Observable<Course[]> {
         return this.http.get<Course[]>(this.url + "/courses");
@@ -26,10 +26,10 @@ export class Service {
     }
 
     getStudentGroups(): Observable<StudentGroup[]> {
-        return this.http.get<StudentGroup[]>(this.url + "/studentGroups"); 
+        return this.http.get<StudentGroup[]>(this.url + "/studentGroups");
     }
 
-    getTimestamps() : Observable<string[]> {
+    getTimestamps(): Observable<string[]> {
         return this.http.get<string[]>(this.url + "/timestamps");
     }
 
@@ -49,11 +49,23 @@ export class Service {
         return this.http.put<any>(this.url + "/studentGroups/"+id,data);
     }
 
-    deleteCourse(id: number){
-        return this.http.delete<any>(this.url + "/courses/"+id);
-    }
-    deleteGroup(id: number){
-        return this.http.delete<any>(this.url + "/studentGroups/"+id);
+    deleteGroup(id: number) {
+        return this.http.delete<any>(this.url + "/studentGroups/" + id);
     }
 
+    postPlan(data: any) {
+        return this.http.post<any>(this.url + "/plan", data);
+    }
+
+    getPlan() {
+        return this.http.get<any>(this.url + "/plan");
+    }
+
+    deletePlan(id: number) {
+        return this.http.delete<any>(this.url + "/plan/" + id);
+    }
+
+    getPlanForGroup(studentGroup: string) {
+        return this.http.get<any>(this.url + "/plan?studentGroup=" + studentGroup);
+    }
 }

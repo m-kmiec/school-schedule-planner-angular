@@ -9,7 +9,7 @@ import { StudentGroup } from '../models/studentsGroup';
 })
 export class StudentGroupSelectComponent implements OnInit {
 
-  selectedStudentGroup?: string;
+  selectedStudentGroup: string = '';
 
   studentGroups: StudentGroup[] = []
 
