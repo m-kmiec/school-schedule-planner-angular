@@ -28,9 +28,17 @@ export class GroupDialogComponent implements OnInit {
     });
   }
 
+  getErrorForName(): string{
+    if(this.groupForm.controls['name'].hasError('required')){
+      return "This field is required!";
+    }else if(this.groupForm.controls['name'].hasError('maxlength')){
+        return "This field can only be 2 characters long!"
+    }else return "Invalid input";
+  }
+
   ngOnInit(): void {
     this.groupForm = this.formBuilder.group({
-      name: ['', Validators.required],
+      name: ['', [Validators.required,Validators.maxLength(2)]],
       additionalCourses: [[], Validators.required]
     })
 

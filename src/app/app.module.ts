@@ -17,9 +17,7 @@ import { StudentGroupSelectComponent } from './student-group-select/student-grou
 import { GroupListComponent } from './group-list/group-list.component';
 import { GroupDialogComponent } from './group-dialog/group-dialog.component';
 import { MaterialModule } from './material/material.module';
-import { AddCourseForDayComponent } from './add-course-for-day/add-course-for-day.component';
 import { StartcasePipe } from './startcase.pipe';
-
 import { SelectCourseForTimestampComponent } from './select-course-for-timestamp/select-course-for-timestamp.component';
 
 @NgModule({
@@ -34,7 +32,6 @@ import { SelectCourseForTimestampComponent } from './select-course-for-timestamp
     CourseTableComponent,
     GroupListComponent,
     GroupDialogComponent,
-    AddCourseForDayComponent,
     StartcasePipe,
     SelectCourseForTimestampComponent
   ],

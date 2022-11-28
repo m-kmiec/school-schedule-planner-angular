@@ -8,7 +8,7 @@ import { GroupDialogComponent } from './group-dialog/group-dialog.component';
 import { StudentGroupSelectComponent } from './student-group-select/student-group-select.component';
 
 const routes: Routes = [
-  { path: '', component: HomePageComponent },
+  { path: '', component: StudentGroupSelectComponent },
   { path: "subjects", component: AppComponent },
   { path: "courses", component: CourseListComponent },
   { path: "addCourse", component: CourseDialogComponent },

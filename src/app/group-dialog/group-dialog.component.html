@@ -5,6 +5,7 @@
         <mat-form-field appearance="outline">
             <mat-label>Name:</mat-label>
             <input matInput type="text" formControlName="name" name="name">
+            <mat-error *ngIf="groupForm.get('name')?.invalid && (groupForm.get('name')?.dirty || groupForm.get('name')?.touched)">{{getErrorForName()}}</mat-error>
         </mat-form-field>
         <mat-form-field appearance="fill">
             <mat-label>Courses: </mat-label>

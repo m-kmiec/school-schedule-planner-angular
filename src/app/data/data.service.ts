@@ -33,6 +33,14 @@ export class Service {
         return this.http.get<string[]>(this.url + "/timestamps");
     }
 
+    getDays(): Observable<string[]> {
+        return this.http.get<string[]>(this.url + '/days');
+    }
+
+    getAdditionalCourses(studentGroup: string): Observable<any> {
+        return this.http.get<any>(this.url + "/studentGroups?name=" + studentGroup);
+    }
+
     addCourse(data: Course) {
         return this.http.post<any>(this.url + "/courses",data);
     }
@@ -51,6 +59,10 @@ export class Service {
 
     deleteGroup(id: number) {
         return this.http.delete<any>(this.url + "/studentGroups/" + id);
+    }
+
+    deleteCourse(id: number) {
+        return this.http.delete<any>(this.url + "/courses/" + id);
     }
 
     postPlan(data: any) {
