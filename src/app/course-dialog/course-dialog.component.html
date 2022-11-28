@@ -1,6 +1,6 @@
-<h1 mat-form-title>Create new course!</h1>
+<h1 mat-form-title>{{labelName}}</h1>
 <div mat-form-content>
-    <label>Create new course!</label>
+    <label>{{labelName}}</label>
     <form [formGroup]="courseForm">
             <mat-form-field appearance="outline">
                 <mat-label>Select subject:</mat-label>
@@ -30,6 +30,6 @@
                 <mat-label>Hours required:</mat-label>
                 <input matInput formControlName="hoursReq" name="hoursReq">
             </mat-form-field>
-            <button mat-raised-button color="primary" (click) = "addCourse()">Add</button>
+            <button mat-raised-button color="primary" (click) = "addCourse()">{{buttonName}}</button>
     </form>
 </div>

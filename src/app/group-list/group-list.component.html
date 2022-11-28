@@ -24,5 +24,4 @@
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
-
-<button color="green" (click)="openDialog()">Add</button>
+<button mat-fab style="position: absolute; right: 0;"	 color="basic" (click)="openDialog()">Add</button>

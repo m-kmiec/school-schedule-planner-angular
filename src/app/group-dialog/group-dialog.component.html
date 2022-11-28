@@ -1,6 +1,6 @@
-<h1 mat-form-title>Create new group!</h1>
+<h1 mat-form-title>{{labelName}}</h1>
 <div mat-form-content>
-    <label>Create new group!</label>
+    <label>{{labelName}}</label>
     <form [formGroup]="groupForm">
         <mat-form-field appearance="outline">
             <mat-label>Name:</mat-label>
@@ -12,6 +12,6 @@
               <mat-option *ngFor="let c of courses" [value]="c">{{c.subject.name}}</mat-option>
             </mat-select>
           </mat-form-field>
-        <button mat-raised-button color="primary" (click)="addGroup()">Add</button>
+        <button mat-raised-button color="primary" (click)="addGroup()">{{buttonName}}</button>
     </form>
 </div>
