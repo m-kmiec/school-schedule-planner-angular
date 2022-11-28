@@ -37,6 +37,10 @@ export class Service {
         return this.http.get<string[]>(this.url + '/days');
     }
 
+    getAdditionalCourses(studentGroup: string): Observable<any> {
+        return this.http.get<any>(this.url + "/studentGroups?name=" + studentGroup);
+    }
+
     addCourse(data: any) {
         return this.http.post<any>(this.url + "/courses", data);
     }
@@ -70,6 +74,6 @@ export class Service {
     }
 
     getPlanForGroup(studentGroup: string) {
-        return this.http.get<any>(this.url + "/plan?studentGroup=" + studentGroup)
+        return this.http.get<any>(this.url + "/plan?studentGroup=" + studentGroup);
     }
 }

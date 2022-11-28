@@ -1,9 +1,12 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { map, of } from 'rxjs';
 import { Service } from '../data/data.service';
 import { Course } from '../models/Course';
 import { StudentGroup } from '../models/studentsGroup';
+import { Subject } from '../models/Subject';
+import { Teacher } from '../models/Teacher';
 
 @Component({
   selector: 'app-select-course-for-timestamp',
@@ -12,14 +15,18 @@ import { StudentGroup } from '../models/studentsGroup';
 })
 export class SelectCourseForTimestampComponent implements OnInit {
 
-  courses: Course[] = [];
+  courses: any[] = [];
+  additionalCourses !: any[];
   studentGroups: StudentGroup[] = []
   courseForm !: FormGroup;
+  studentGroup !: StudentGroup;
 
   constructor(
+    @Inject(MAT_DIALOG_DATA) public studentGroupName: any,
     private service : Service,
     private formBuilder : FormBuilder,
-    private dialogRef : MatDialogRef<SelectCourseForTimestampComponent>) { }
+    private dialogRef : MatDialogRef<SelectCourseForTimestampComponent>,
+    ) { }
 
   ngOnInit(): void {
     this.courseForm = this.formBuilder.group({
@@ -33,10 +40,24 @@ export class SelectCourseForTimestampComponent implements OnInit {
       sixthTimestamp: ['12:45 - 13:30', Validators.required],
       seventhTimestamp: ['13:40 - 14:25', Validators.required],
     }),
+
+    this.service.getAdditionalCourses(this.studentGroupName).
+        subscribe(data => {
+          this.studentGroup = data;
+          this.additionalCourses = data[0].additionalCourses;
+        });
+
     this.service.getCourses().
-      subscribe(data => this.courses = data);
+      subscribe(data => {
+        this.courses = data;
+        this.courses = this.courses.filter(c => c.subject.isMandatory === true);
+        this.courses = [...this.courses, ...this.additionalCourses];
+        this.courses.push(new Course(new Subject("","",false), {} as Teacher,"",0,0));
+      });
+
     this.service.getStudentGroups().
       subscribe(data => this.studentGroups = data);
+
   }
 
   addTimestamp(): void {
@@ -51,6 +72,7 @@ export class SelectCourseForTimestampComponent implements OnInit {
           alert("Error while adding the schedule");
         } 
       });
+
     }
   }
 

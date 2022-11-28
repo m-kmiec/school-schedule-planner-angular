@@ -1,40 +1,47 @@
-<p> {{ studentGroup}} </p>
+<table  mat-table class="mat-elevation-z8 courses-table" [dataSource]="plan|slice:0:5">
 
-<table mat-table class="courses-table mat-elevation-z8" [dataSource]="timestamps">
-
-<ng-container matColumnDef="Duration">
-    <th mat-header-cell *matHeaderCellDef></th>
-    <td mat-cell *matCellDef="let timestamp"> {{timestamp}} </td>
+<ng-container matColumnDef="day">
+    <th mat-header-cell *matHeaderCellDef> </th>
+    <td mat-cell *matCellDef="let element"> {{ element.day }} </td>
 </ng-container>
 
-<ng-container matColumnDef="Monday">
-    <th mat-header-cell *matHeaderCellDef> Monday </th>
-    <td mat-cell *matCellDef="let course">  </td>
+<ng-container matColumnDef="firstTimestamp">
+    <th mat-header-cell *matHeaderCellDef> 8:00 - 8:45 </th>
+    <td mat-cell *matCellDef="let element"> {{ element.firstTimestamp.subject.name }} </td>
 </ng-container>
 
-<ng-container matColumnDef="Tuesday">
-    <th mat-header-cell *matHeaderCellDef> Tuesday </th>
-    <td mat-cell *matCellDef="let course">   </td>
+<ng-container matColumnDef="secondTimestamp">
+    <th mat-header-cell *matHeaderCellDef> 8:55 - 9:40 </th>
+    <td mat-cell *matCellDef="let element"> {{ element.secondTimestamp.subject.name }}  </td>
 </ng-container>
 
-<ng-container matColumnDef="Wednesday">
-    <th mat-header-cell *matHeaderCellDef> Wednesday </th>
-    <td mat-cell *matCellDef="let course">  </td>
+<ng-container matColumnDef="thirdTimestamp">
+    <th mat-header-cell *matHeaderCellDef> 9:50 - 10:35 </th>
+    <td mat-cell *matCellDef="let element"> {{ element.thirdTimestamp.subject.name }} </td>
 </ng-container>
 
-<ng-container matColumnDef="Thursday">
-    <th mat-header-cell *matHeaderCellDef> Thursday </th>
-    <td mat-cell *matCellDef="let course"> </td>
+<ng-container matColumnDef="fourthTimestamp">
+    <th mat-header-cell *matHeaderCellDef> 10:55 - 11:40 </th>
+    <td mat-cell *matCellDef="let element"> {{ element.fourthTimestamp.subject.name }}</td>
 </ng-container>
 
-<ng-container matColumnDef="Friday">+
-    <th mat-header-cell *matHeaderCellDef> Friday </th>
-    <td mat-cell *matCellDef="let course">  </td>
+<ng-container matColumnDef="fifthTimestamp">
+    <th mat-header-cell *matHeaderCellDef> 11:50 - 12:35 </th>
+    <td mat-cell *matCellDef="let element"> {{ element.fifthTimestamp.subject.name }} </td>
+</ng-container>
+
+<ng-container matColumnDef="sixthTimestamp">
+    <th mat-header-cell *matHeaderCellDef> 12:45 - 13:30 </th>
+    <td mat-cell *matCellDef="let element"> {{ element.sixthTimestamp.subject.name }}  </td>
+</ng-container>
+
+<ng-container matColumnDef="seventhTimestamp">
+    <th mat-header-cell *matHeaderCellDef> 13:40 - 14:25 </th>
+    <td mat-cell *matCellDef="let element"> {{ element.seventhTimestamp.subject.name }} </td>
 </ng-container>
 
 <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-
-<tr mat-row *matRowDef="let Courses;columns:displayedColumns"></tr>
+<tr mat-row *matRowDef="let row; columns: displayedColumns"> </tr>
 
 </table>
 
