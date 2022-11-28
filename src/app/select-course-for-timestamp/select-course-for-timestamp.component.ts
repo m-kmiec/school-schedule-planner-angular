@@ -17,9 +17,10 @@ export class SelectCourseForTimestampComponent implements OnInit {
 
   courses: any[] = [];
   additionalCourses !: any[];
-  studentGroups: StudentGroup[] = []
+  studentGroups: StudentGroup[] = [];
   courseForm !: FormGroup;
   studentGroup !: StudentGroup;
+  days: string[] = [];
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public studentGroupName: any,
@@ -40,6 +41,9 @@ export class SelectCourseForTimestampComponent implements OnInit {
       sixthTimestamp: ['12:45 - 13:30', Validators.required],
       seventhTimestamp: ['13:40 - 14:25', Validators.required],
     });
+
+    this.service.getDays().
+        subscribe(data => this.days = data);
 
     this.service.getAdditionalCourses(this.studentGroupName).
         subscribe(data => {

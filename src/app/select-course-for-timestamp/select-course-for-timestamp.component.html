@@ -12,11 +12,9 @@
         <mat-form-field appearance="outline">
             <mat-label>Day</mat-label>
             <mat-select formControlName="day">
-                <mat-option value="Monday"> Monday </mat-option>
-                <mat-option value="Tuesday"> Tuesday </mat-option>
-                <mat-option value="Wednesday"> Wednesday </mat-option>
-                <mat-option value="Thursday"> Thursday </mat-option>
-                <mat-option value="Friday"> Friday </mat-option>
+                <mat-option *ngFor="let day of days" [value]=day>
+                    {{ day }}
+                </mat-option>
             </mat-select>
         </mat-form-field>
         <mat-form-field appearance="outline">
