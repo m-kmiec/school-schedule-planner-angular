@@ -29,10 +29,6 @@ export class Service {
         return this.http.get<StudentGroup[]>(this.url + "/studentGroups");
     }
 
-    getTimestamps(): Observable<string[]> {
-        return this.http.get<string[]>(this.url + "/timestamps");
-    }
-
     getDays(): Observable<string[]> {
         return this.http.get<string[]>(this.url + '/days');
     }
