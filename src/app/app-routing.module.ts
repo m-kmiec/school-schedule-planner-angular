@@ -9,7 +9,7 @@ import { GroupListComponent } from './group-list/group-list.component';
 import { GroupDialogComponent } from './group-dialog/group-dialog.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomePageComponent },
+  { path: '', component: HomePageComponent },
   { path: "subjects", component: AppComponent },
   { path: "courses", component: CourseListComponent },
   { path: "addCourse", component: CourseDialogComponent },

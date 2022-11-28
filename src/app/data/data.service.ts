@@ -33,19 +33,19 @@ export class Service {
         return this.http.get<string[]>(this.url + "/timestamps");
     }
 
-    addCourse(data: any) {
+    addCourse(data: Course) {
         return this.http.post<any>(this.url + "/courses",data);
     }
 
-    addGroup(data: any) {
+    addGroup(data: StudentGroup) {
         return this.http.post<any>(this.url + "/studentGroups",data);
     }
 
-    editCourse(data: any, id:number){
+    editCourse(data: Course, id:number){
         return this.http.put<any>(this.url + "/courses/"+id,data);
     }
 
-    editGroup(data: any, id:number){
+    editGroup(data: StudentGroup, id:number){
         return this.http.put<any>(this.url + "/studentGroups/"+id,data);
     }
 

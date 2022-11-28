@@ -35,8 +35,8 @@ export class GroupDialogComponent implements OnInit {
     })
 
     if (this.editData) {
-      this.labelName = "Edit group!";
-      this.buttonName = "Update";
+      this.labelName = "edit group!";
+      this.buttonName = "update";
       this.groupForm.controls['name'].setValue(this.editData.name);
       this.groupForm.controls['additionalCourses'].setValue(this.editData.additionalCourses);
     }

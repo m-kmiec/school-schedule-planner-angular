@@ -9,7 +9,7 @@ export class Subject{
             this._abbre = abbre;
         }
 
-        public get abbre(){
+        public get abbre(): string{
             return this._abbre;
         }
 
@@ -17,7 +17,7 @@ export class Subject{
             this._name = name;
         }
 
-        public get name(){
+        public get name(): string{
             return this._name;
         }
 
@@ -26,7 +26,7 @@ export class Subject{
             this._isMandatory = mandatory;
         }
 
-        public get isMandatory(){
+        public get isMandatory(): boolean{
             return this._isMandatory;
         }
 }
