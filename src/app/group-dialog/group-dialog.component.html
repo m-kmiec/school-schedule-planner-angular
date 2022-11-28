@@ -1,0 +1,18 @@
+<h1 mat-form-title>{{labelName | startcase}}</h1>
+<div mat-form-content>
+    <label>{{labelName}}</label>
+    <form [formGroup]="groupForm">
+        <mat-form-field appearance="outline">
+            <mat-label>Name:</mat-label>
+            <input matInput type="text" formControlName="name" name="name">
+            <mat-error *ngIf="groupForm.get('name')?.invalid && (groupForm.get('name')?.dirty || groupForm.get('name')?.touched)">{{getErrorForName()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Courses: </mat-label>
+            <mat-select formControlName="additionalCourses" name="additionalCourses" multiple>
+              <mat-option *ngFor="let c of courses" [value]="c">{{c.subject.name}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        <button mat-raised-button color="primary" (click)="addGroup()">{{buttonName | uppercase}}</button>
+    </form>
+</div>

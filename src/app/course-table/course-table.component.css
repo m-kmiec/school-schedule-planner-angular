@@ -1,23 +1,48 @@
-.mat-column-Duration {
-    padding-right: 20px;
+.courses-table {
+    width: 100%;
 }
 
-.mat-column-Monday {
-    padding-right: 20px;
+th,
+td {
+  border: 1px solid black;
+  width: 100px;
+  overflow: hidden;
 }
 
-.mat-column-Tuesday {
-    padding-right: 20px;
+.mat-column-day {
+    border-right: solid currentColor;
+    text-align: left;
+}
+  
+.mat-column-firstTimestamp {
+    padding-left: 20px;
+}
+.mat-column-secondTimestamp {
+    padding-left: 20px;
+}
+.mat-column-thirdTimestamp {
+    padding-left: 20px;
+}
+.mat-column-fourthTimestamp {
+    padding-left: 20px;
+}
+.mat-column-fifthTimestamp {
+    padding-left: 20px;
+}
+.mat-column-sixthTimestamp {
+    padding-left: 20px;
+}
+.mat-column-seventhTimestamp {
+    padding-left: 20px;
+}
+.mat-column-action {
+    padding-left: 20px;
 }
 
-.mat-column-Wednesday {
-    padding-right: 20px;
-}
-
-.mat-column-Thursday {
-    padding-right: 20px;
-}
-
-.mat-column-Friday {
-    padding-right: 20px;
+.mat-form-field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
 }

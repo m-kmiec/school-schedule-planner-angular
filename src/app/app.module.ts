@@ -5,24 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import {MatSelectModule} from '@angular/material/select';
 import { CourseListComponent } from './course-list/course-list.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
 import { RouterModule } from '@angular/router';
-import { AddCourseComponent } from './add-course/add-course.component';
+import { CourseDialogComponent } from './course-dialog/course-dialog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatIconModule } from '@angular/material/icon';
 import { CourseTableComponent } from './course-table/course-table.component';
-import { MatTableModule } from '@angular/material/table';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatDialogModule } from "@angular/material/dialog";
-import { MatInputModule} from "@angular/material/input";
-import { MatCard, MatCardModule } from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
-import { CoursesService } from './data/courses.service';
-
+import { Service } from './data/data.service';
+import { StudentGroupSelectComponent } from './student-group-select/student-group-select.component';
+import { GroupListComponent } from './group-list/group-list.component';
+import { GroupDialogComponent } from './group-dialog/group-dialog.component';
+import { MaterialModule } from './material/material.module';
+import { StartcasePipe } from './startcase.pipe';
+import { SelectCourseForTimestampComponent } from './select-course-for-timestamp/select-course-for-timestamp.component';
 
 @NgModule({
   declarations: [
@@ -30,8 +26,14 @@ import { CoursesService } from './data/courses.service';
     NavbarComponent,
     CourseListComponent,
     CourseDetailsComponent,
-    AddCourseComponent,
     CourseTableComponent,
+    StudentGroupSelectComponent,
+    CourseDialogComponent,
+    CourseTableComponent,
+    GroupListComponent,
+    GroupDialogComponent,
+    StartcasePipe,
+    SelectCourseForTimestampComponent
   ],
   imports: [
     BrowserModule,
@@ -39,22 +41,13 @@ import { CoursesService } from './data/courses.service';
     AppRoutingModule,
     BrowserAnimationsModule,
     RouterModule,
-    MatTableModule,
-    MatFormFieldModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatIconModule,
-    MatSelectModule,
-    MatDialogModule,
-    MatInputModule,
-    MatDialogModule,
-    MatCardModule,
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule,
-
+    FormsModule,
+    MaterialModule
   ],
-  providers: [CoursesService],
+  providers: [Service],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
