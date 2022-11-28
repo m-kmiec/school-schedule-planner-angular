@@ -39,7 +39,7 @@ export class SelectCourseForTimestampComponent implements OnInit {
       fifthTimestamp: ['11:50 - 12:35', Validators.required],
       sixthTimestamp: ['12:45 - 13:30', Validators.required],
       seventhTimestamp: ['13:40 - 14:25', Validators.required],
-    }),
+    });
 
     this.service.getAdditionalCourses(this.studentGroupName).
         subscribe(data => {

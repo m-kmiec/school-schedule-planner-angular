@@ -35,6 +35,9 @@ td {
 .mat-column-seventhTimestamp {
     padding-left: 20px;
 }
+.mat-column-action {
+    padding-left: 20px;
+}
 
 .mat-form-field {
     display: flex;

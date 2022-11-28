@@ -73,6 +73,10 @@ export class Service {
         return this.http.get<any>(this.url + "/plan");
     }
 
+    deletePlan(id: number) {
+        return this.http.delete<any>(this.url + "/plan/" + id);
+    }
+
     getPlanForGroup(studentGroup: string) {
         return this.http.get<any>(this.url + "/plan?studentGroup=" + studentGroup);
     }
