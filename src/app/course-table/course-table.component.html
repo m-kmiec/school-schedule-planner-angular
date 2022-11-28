@@ -27,7 +27,7 @@
     <td mat-cell *matCellDef="let course"> </td>
 </ng-container>
 
-<ng-container matColumnDef="Friday">
+<ng-container matColumnDef="Friday">+
     <th mat-header-cell *matHeaderCellDef> Friday </th>
     <td mat-cell *matCellDef="let course">  </td>
 </ng-container>
@@ -38,4 +38,6 @@
 
 </table>
 
-<app-add-course-for-day [studentGroup]="studentGroup"></app-add-course-for-day>
+<button mat-raised-button (click)="onSelectionChange()">
+    Add courses
+</button> 

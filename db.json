@@ -100,9 +100,63 @@
           "duration": "45min",
           "hoursReq": "4",
           "id": 6
+        },
+        {
+          "subject": {
+            "name": "Advanced History",
+            "abbre": "aHIS",
+            "isMandatory": false
+          },
+          "teacher": {
+            "name": "Tahlia",
+            "surrname": "Benson",
+            "coursesTaught": []
+          },
+          "type": "Memory",
+          "duration": "45min",
+          "hoursReq": "3",
+          "id": 7
         }
       ],
       "id": 1
+    },
+    {
+      "name": "3F",
+      "additionalCourses": [
+        {
+          "subject": {
+            "name": "Advanced Chemistry",
+            "abbre": "aCHEM",
+            "isMandatory": false
+          },
+          "teacher": {
+            "name": "Licoln",
+            "surrname": "Dean",
+            "coursesTaught": []
+          },
+          "type": "Science",
+          "duration": "45min",
+          "hoursReq": "4",
+          "id": 6
+        },
+        {
+          "subject": {
+            "name": "Advanced History",
+            "abbre": "aHIS",
+            "isMandatory": false
+          },
+          "teacher": {
+            "name": "Tahlia",
+            "surrname": "Benson",
+            "coursesTaught": []
+          },
+          "type": "Memory",
+          "duration": "45min",
+          "hoursReq": "3",
+          "id": 7
+        }
+      ],
+      "id": 2
     }
   ],
   "subjects": [
@@ -202,25 +256,25 @@
       "timestamp": "8:55 - 9:40"
     },
     {
-      "timestamp":"9:50 - 10:35"
+      "timestamp": "9:50 - 10:35"
     },
     {
-      "timestamp":"10:55 - 11:40"
+      "timestamp": "10:55 - 11:40"
     },
     {
-      "timestamp":"11:50 - 12:35"
+      "timestamp": "11:50 - 12:35"
     },
     {
-      "timestamp":"12:45 - 13:30"
+      "timestamp": "12:45 - 13:30"
     },
     {
-      "timestamp":"13:40 - 14:25"
+      "timestamp": "13:40 - 14:25"
     },
     {
-      "timestamp":"14:40 - 16:10"
+      "timestamp": "14:40 - 16:10"
     }
   ],
-  "days" : [
+  "days": [
     {
       "day": "Monday"
     },
@@ -235,6 +289,125 @@
     },
     {
       "day": "Friday"
+    }
+  ],
+  "plan": [
+    {
+      "studentGroup": "3F",
+      "day": "Monday",
+      "firstTimestamp": {
+        "subject": {
+          "name": "Mathematics",
+          "abbre": "MATH",
+          "isMandatory": true
+        },
+        "teacher": {
+          "name": "Licoln",
+          "surrname": "Dean",
+          "coursesTaught": []
+        },
+        "type": "maths",
+        "duration": "45 min",
+        "hoursReq": "5",
+        "id": 4
+      },
+      "secondTimestamp": {
+        "subject": {
+          "name": "Biology",
+          "abbre": "BIO",
+          "isMandatory": true
+        },
+        "teacher": {
+          "name": "Tahlia",
+          "surrname": "Benson",
+          "coursesTaught": []
+        },
+        "type": "science",
+        "duration": "8:00 - 8:45",
+        "hoursReq": "4",
+        "id": 5
+      },
+      "thirdTimestamp": {
+        "subject": {
+          "name": "Biology",
+          "abbre": "BIO",
+          "isMandatory": true
+        },
+        "teacher": {
+          "name": "Tahlia",
+          "surrname": "Benson",
+          "coursesTaught": []
+        },
+        "type": "science",
+        "duration": "8:00 - 8:45",
+        "hoursReq": "4",
+        "id": 5
+      },
+      "fourthTimestamp": {
+        "subject": {
+          "name": "Biology",
+          "abbre": "BIO",
+          "isMandatory": true
+        },
+        "teacher": {
+          "name": "Tahlia",
+          "surrname": "Benson",
+          "coursesTaught": []
+        },
+        "type": "science",
+        "duration": "8:00 - 8:45",
+        "hoursReq": "4",
+        "id": 5
+      },
+      "fifthTimestamp": {
+        "subject": {
+          "name": "Biology",
+          "abbre": "BIO",
+          "isMandatory": true
+        },
+        "teacher": {
+          "name": "Tahlia",
+          "surrname": "Benson",
+          "coursesTaught": []
+        },
+        "type": "science",
+        "duration": "8:00 - 8:45",
+        "hoursReq": "4",
+        "id": 5
+      },
+      "sixthTimestamp": {
+        "subject": {
+          "name": "Biology",
+          "abbre": "BIO",
+          "isMandatory": true
+        },
+        "teacher": {
+          "name": "Tahlia",
+          "surrname": "Benson",
+          "coursesTaught": []
+        },
+        "type": "science",
+        "duration": "8:00 - 8:45",
+        "hoursReq": "4",
+        "id": 5
+      },
+      "seventhTimestamp": {
+        "subject": {
+          "name": "Mathematics",
+          "abbre": "MATH",
+          "isMandatory": true
+        },
+        "teacher": {
+          "name": "Licoln",
+          "surrname": "Dean",
+          "coursesTaught": []
+        },
+        "type": "maths",
+        "duration": "45 min",
+        "hoursReq": "5",
+        "id": 4
+      },
+      "id": 1
     }
   ]
 }

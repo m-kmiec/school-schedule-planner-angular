@@ -13,14 +13,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CourseTableComponent } from './course-table/course-table.component';
 import { HttpClientModule } from '@angular/common/http';
 import { Service } from './data/data.service';
-import { HomePageComponent } from './home-page/home-page.component';
 import { StudentGroupSelectComponent } from './student-group-select/student-group-select.component';
 import { GroupListComponent } from './group-list/group-list.component';
 import { GroupDialogComponent } from './group-dialog/group-dialog.component';
 import { MaterialModule } from './material/material.module';
-import { AddCourseForDayComponent } from './add-course-for-day/add-course-for-day.component';
-import { AddCourseForDayDialogComponent } from './add-course-for-day-dialog/add-course-for-day-dialog.component';
-
+import { SelectCourseForTimestampComponent } from './select-course-for-timestamp/select-course-for-timestamp.component';
 
 @NgModule({
   declarations: [
@@ -29,13 +26,12 @@ import { AddCourseForDayDialogComponent } from './add-course-for-day-dialog/add-
     CourseListComponent,
     CourseDetailsComponent,
     CourseTableComponent,
-    HomePageComponent,
     StudentGroupSelectComponent,
     CourseDialogComponent,
     CourseTableComponent,
     GroupListComponent,
     GroupDialogComponent,
-    AddCourseForDayComponent,
+    SelectCourseForTimestampComponent
   ],
   imports: [
     BrowserModule,
